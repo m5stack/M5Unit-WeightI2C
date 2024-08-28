@@ -175,7 +175,7 @@ uint8_t M5UnitWeightI2C::getI2CAddress(void) {
     uint8_t RegValue;
 
     _wire->requestFrom(_addr, 1);
-    RegValue = Wire.read();
+    RegValue = _wire->read();
     return RegValue;
 }
 
@@ -187,7 +187,7 @@ uint8_t M5UnitWeightI2C::getFirmwareVersion(void) {
     uint8_t RegValue;
 
     _wire->requestFrom(_addr, 1);
-    RegValue = Wire.read();
+    RegValue = _wire->read();
     return RegValue;
 }
 
